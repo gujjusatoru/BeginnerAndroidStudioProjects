@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sunfire"
+    tools:context=".recyclernormal.NormalRecycler">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/heading"
+        android:textSize="32sp"
+        android:text="Normal Recycler View"
+        android:textColor="#634C37"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:layout_marginBottom="5dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading"
+        android:id="@+id/recycle1"
+        android:layout_marginBottom="39dp"
+        android:padding="10dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/recycle1"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0dp"
+        android:textColor="#342A21"
+        android:text="BACK"
+        android:id="@+id/normalback"
+        android:textSize="22sp"
+        android:background="@drawable/normal_list"/>
+
+
+</RelativeLayout>

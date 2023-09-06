@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Contact"
+        android:id="@+id/titlecont"
+        android:textAlignment="center"
+        android:lineSpacingExtra="10sp"
+        android:layout_marginBottom="25dp"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Enter Name"
+        android:gravity="center"
+        android:id="@+id/inputname"
+        android:inputType="textCapSentences|textMultiLine"
+        android:lines="4"
+        android:layout_marginBottom="20dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Enter Email"
+        android:gravity="center"
+        android:id="@+id/inputemail"
+        android:inputType="textCapSentences|textMultiLine"
+        android:lines="4"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Number"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:id="@+id/inputnum"
+        android:inputType="number"
+        android:maxLength="10"/>
+</LinearLayout>

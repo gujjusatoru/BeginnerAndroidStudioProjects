@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pinkbrown"
+    tools:context=".recyclermanyview.ManyViewRecycler">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Multiple View Recycler"
+        android:id="@+id/headmany"
+        android:textColor="#CCB4AE"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headmany"
+
+        android:layout_marginBottom="48dp"
+        android:id="@+id/recycle4"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="BACK"
+        android:layout_alignBottom="@id/recycle4"
+        android:layout_alignParentBottom="true"
+        android:textColor="#7E303E"
+        android:id="@+id/manyback"
+        android:background="@drawable/rosebrowns"
+        />
+
+</RelativeLayout>

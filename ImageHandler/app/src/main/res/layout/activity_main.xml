@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/slip" />
+    </LinearLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/rotate"
+        android:max="180"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/seek"
+        android:thumb="@drawable/thumb"
+        android:thumbOffset="-5dp"
+        android:progress="90"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"/>
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:max="20"
+        android:thumbOffset="-5dp"
+        android:progress="10"
+        android:id="@+id/scale"
+        android:progressDrawable="@drawable/seek"
+        android:thumb="@drawable/thumb"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rotate"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/up"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/up" />
+
+        <Button
+            android:id="@+id/down"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/left"
+            android:layout_toEndOf="@id/left"
+            android:background="@drawable/down" />
+
+        <Button
+            android:id="@+id/right"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/up"
+            android:layout_toEndOf="@id/up"
+            android:background="@drawable/right" />
+
+        <Button
+            android:id="@+id/left"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/up"
+            android:background="@drawable/left" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

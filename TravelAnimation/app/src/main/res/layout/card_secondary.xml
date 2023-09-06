@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="25dp"
+    android:elevation="10dp"
+    android:id="@+id/card2"
+    android:layout_margin="10dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_main">
+
+        <ImageView
+            android:id="@+id/imageViewSecond"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewSecond"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="city"
+            android:padding="5dp"
+            android:textSize="22sp"
+            android:textColor="#736040"
+            android:gravity="center_vertical|center_horizontal"
+            android:fontFamily="@font/harvest_bailey"
+            android:textStyle="bold"
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="23sp"
+                android:id="@+id/state"
+                android:padding="5dp"
+                android:letterSpacing="0.2"
+                android:gravity="center_vertical|center_horizontal"
+                android:fontFamily="@font/harvest_bailey_script"
+                android:text="state"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/viewbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/harvest_bailey"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="view"
+                android:letterSpacing="0.3"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondAct"
+    android:orientation="vertical"
+    android:background="@drawable/secondbg">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Language Detected"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/image_flag"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="30sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Country Name:"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:id="@+id/name"
+        android:background="@color/black"
+        android:layout_marginTop="30sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Country Name"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginTop="30sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Language Spoken:"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:id="@+id/language"
+        android:layout_marginTop="30sp"
+        android:textAlignment="center"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:text="Country Language"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50sp"
+        android:text="BACK"
+        android:id="@+id/backbtn"
+        android:textSize="20sp"
+        android:background="@color/white"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

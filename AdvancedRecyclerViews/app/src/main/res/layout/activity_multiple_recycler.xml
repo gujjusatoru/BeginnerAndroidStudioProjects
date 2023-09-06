@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/beach"
+    tools:context=".recyclermultiple.MultipleRecycler">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Multiple Selection Recycler"
+        android:id="@+id/headmulti"
+        android:textColor="#334297"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headmulti"
+
+        android:layout_marginBottom="53dp"
+        android:id="@+id/recycle5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@id/recycle5"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:padding="5dp"
+        android:weightSum="2">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="BACK"
+            android:layout_weight="1"
+            android:textColor="#334297"
+            android:id="@+id/multiback"
+            android:background="@drawable/button_main"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Show Selected"
+            android:layout_marginStart="2dp"
+            android:textColor="#334297"
+            android:background="@drawable/button_main"
+            android:layout_weight="1"
+            android:id="@+id/multishow"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

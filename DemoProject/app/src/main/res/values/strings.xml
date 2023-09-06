@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Photo Frame</string>
+    <string name="text_add">Add Text</string>
+    <string name="save">Save Image</string>
+    <string name="share">Share</string>
+    <string name="mainbtn1">Camera</string>
+    <string name="mainbtn2">Gallery</string>
+    <string name="mainbtn3">My Creations</string>
+    <string name="actionBtn1">Frames</string>
+    <string name="actionBtn2">Stickers</string>
+    <string name="actionBtn3">Text</string>
+    <string name="EditText">Click to Add Text</string>
+    <string name="DialogTitle">Choose Action</string>
+    <string name="delete">Delete</string>
+    <string name="open">Open</string>
+    <string name="cancel">Cancel</string>
+
+
+</resources>

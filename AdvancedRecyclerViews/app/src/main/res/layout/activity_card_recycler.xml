@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rosebrowns"
+    tools:context=".recyclercard.CardRecycler">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CardView Recycler"
+        android:id="@+id/head"
+        android:textColor="#6A396E"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head"
+
+        android:layout_marginBottom="48dp"
+        android:id="@+id/recycle2"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="BACK"
+        android:layout_alignBottom="@id/recycle2"
+        android:layout_alignParentBottom="true"
+        android:textColor="#6A396E"
+        android:id="@+id/cardback"
+        android:background="@drawable/buttoncard"
+        />
+
+</RelativeLayout>
