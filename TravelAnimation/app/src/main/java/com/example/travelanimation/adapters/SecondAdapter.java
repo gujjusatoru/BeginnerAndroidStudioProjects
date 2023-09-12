@@ -82,19 +82,7 @@ public class SecondAdapter extends RecyclerView.Adapter<SecondAdapter.MyViewHold
             this.image=itemView.findViewById(R.id.imageViewSecond);
             this.viewBtn=itemView.findViewById(R.id.viewbtn);
             if(viewType==1) {
-                viewBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        getType = city.getText().toString();
-                        for (int i = 0; i < dataSet.size(); i++) {
-                            if (getType == dataSet.get(i).getName()) {
-                                clicked.btnClick(getType);
-                                int j = getAdapterPosition();
-                                clicked.onSelect(v, j,1);
-                            }
-                        }
-                    }
-                });
+                itemView.setOnClickListener(this);
             }
             if(viewType==2){
                 viewBtn.setVisibility(View.GONE);
@@ -107,7 +95,15 @@ public class SecondAdapter extends RecyclerView.Adapter<SecondAdapter.MyViewHold
 
         @Override
         public void onClick(View v) {
-            clicked.onSelect(v,getAdapterPosition(),2);
+            if(viewType==1) {
+                getType = city.getText().toString();
+                for (int i = 0; i < dataSet.size(); i++) {
+                    if (getType == dataSet.get(i).getName()) {
+                        clicked.btnClick(getType);
+                    }
+                }
+            }
+            clicked.onSelect(v,getAdapterPosition(),viewType);
 
         }
     }

@@ -24,9 +24,27 @@ public class MainActivity extends AppCompatActivity {
         generate_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),Share.class);
-                i.putExtra("name",name_tv.getText().toString());
-                startActivity(i);
+                if(name_tv.getText().toString().equals("")){
+                    name_tv.setError("No Name entered");
+                    name_tv.requestFocus();
+                }
+                else if(name_tv.getText().toString().matches(".*\\d.*")){
+                    name_tv.setError("No number allowed");
+                    name_tv.requestFocus();
+                }
+//                else if(name_tv.getText().toString().matches(".*\\s.*")){
+//                    name_tv.setError("No whitespaces allowed");
+//                    name_tv.requestFocus();
+//                }
+                else if(name_tv.getText().toString().matches(".*[\"'\\n].*")){
+                    name_tv.setError("No other character allowed");
+                    name_tv.requestFocus();
+                }
+                else {
+                    Intent i = new Intent(getApplicationContext(), Share.class);
+                    i.putExtra("name", name_tv.getText().toString());
+                    startActivity(i);
+                }
 
             }
         });

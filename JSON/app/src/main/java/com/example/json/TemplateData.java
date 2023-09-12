@@ -288,7 +288,11 @@ public class TemplateData {
     }
     public static final String getData="SELECT * FROM "+TABLE_NAME1+" LEFT OUTER JOIN " +TABLE_NAME2+" ON "+TABLE_NAME2+"."+COLUMN_NAME1+ "=" +COLUMN_NAME2+" LEFT OUTER JOIN "+TABLE_NAME3+" ON "+TABLE_NAME3+"."+COLUMN_NAME3+"="+COLUMN_NAME2+" WHERE "+COLUMN_NAME2+"= ?";
     public static final String getMusic="SELECT * FROM "+TABLE_NAME3+" WHERE "+TABLE_NAME3+"."+COLUMN_NAME3+"=? AND "+ TABLE_NAME3+".PARENT_TYPE = 1";
-    public static final String getPages="SELECT * FROM MODEL WHERE "+COLUMN_NAME3+" = ? AND MODEL_TYPE = 'PAGE' AND SOFT_DELETE = 0";
+    public static final String getPage ="SELECT * FROM MODEL WHERE "+COLUMN_NAME3+" = ? AND MODEL_TYPE = 'PAGE' AND SOFT_DELETE = 0";
     public static final String getImage="SELECT * FROM IMAGE where IMAGE.IMAGE_ID = ?";
     public static final String getOverLay="SELECT * FROM IMAGE where IMAGE.IMAGE_ID = ?";
+    public static final String getPagesData="SELECT * FROM MODEL WHERE PARENT_ID = ? and MODEL_TYPE != 'PAGE' AND SOFT_DELETE = 0";
+    public static final String getAnimation="SELECT * FROM ANIMATION WHERE ANIMATION.MODEL_ID = ?";
+    public static final String getText="SELECT * FROM TEXT_MODEL WHERE TEXT_MODEL.TEXT_ID = ?";
+    public static final String getSticker="SELECT * FROM STICKER_MODEL WHERE STICKER_MODEL.STICKER_ID = ?";
 }

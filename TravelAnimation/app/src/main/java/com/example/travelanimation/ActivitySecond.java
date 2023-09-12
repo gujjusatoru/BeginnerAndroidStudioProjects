@@ -13,6 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -32,7 +33,8 @@ public class ActivitySecond extends AppCompatActivity implements OnClick{
     ImageView car,smoke, dialogImg1,dialogImg2;
     Animation car_animate;
     TextView headerTxt, dialogData, dialogHeader;
-    Button backbtn, homebtn, likedbtn, dialogLike, dialogClose;
+    Button dialogLike;
+    RelativeLayout backbtn, homebtn, likedbtn, dialogClose;
     RecyclerView recycleMain,recycleSecondary;
     RecyclerView.LayoutManager layoutManagerMain,layoutManagerSecondary;
     ArrayList<DataModel> data, data2, data3;
@@ -109,7 +111,6 @@ public class ActivitySecond extends AppCompatActivity implements OnClick{
         if (view == 1) {
 
             if (headerTxt.getText().toString().equals("Explore")) {
-
             } else {
                 data3 = new ArrayList<>();
                 clickedView=pos;

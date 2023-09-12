@@ -21,21 +21,29 @@
                 android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp">
-                <Button
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/close"
                     android:layout_marginStart="5dp"
-                    android:gravity="bottom"
-                    android:background="@drawable/close"/>
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/close"
+                        />
+                </RelativeLayout>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="city"
                     android:id="@+id/dialog_city"
                     android:textAlignment="center"
-                    android:letterSpacing="0.3"
                     android:textSize="32sp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_gravity="center"
                     android:fontFamily="@font/harvest_bailey_script"
                     android:textColor="@color/white"
                     android:textStyle="bold"
@@ -43,8 +51,8 @@
 
             </LinearLayout>
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="340dp"
+            android:layout_height="180dp"
             android:id="@+id/dialogImg1"
             android:layout_gravity="center"
             android:layout_margin="10dp"/>
@@ -57,12 +65,12 @@
                 android:fontFamily="@font/harvest_bailey"
                 android:textAllCaps="false"
                 android:text="data"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 />
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="340dp"
+                android:layout_height="180dp"
                 android:id="@+id/dialogImg2"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"/>

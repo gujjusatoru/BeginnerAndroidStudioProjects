@@ -24,22 +24,22 @@ public class DialogData {
                 {R.drawable.srinagar2,R.drawable.srinagar}
             },
             {
-                {R.drawable.gokarna},
-                {R.drawable.andaman},
-                {R.drawable.kochi},
-                {R.drawable.goavagator}
+                {R.drawable.gokarna2,R.drawable.gokarna},
+                {R.drawable.andaman2,R.drawable.andaman},
+                {R.drawable.kochi2,R.drawable.kochi},
+                {R.drawable.goa2,R.drawable.goavagator}
             },
             {
-                {R.drawable.agra},
-                {R.drawable.bodhgaya},
-                {R.drawable.chennai},
-                {R.drawable.gandhinagar}
+                {R.drawable.agra2,R.drawable.agra},
+                {R.drawable.bodhgaya2,R.drawable.bodhgaya},
+                {R.drawable.chennai2,R.drawable.chennai},
+                {R.drawable.gandhinagar2,R.drawable.gandhinagar}
             },
             {
-                {R.drawable.mysore},
-                {R.drawable.guwahati},
-                {R.drawable.wayanad},
-                {R.drawable.coorg}
+                {R.drawable.mysore2,R.drawable.mysore},
+                {R.drawable.guwahati2,R.drawable.guwahati},
+                {R.drawable.wayanadnew,R.drawable.wayanad},
+                {R.drawable.coorg2,R.drawable.coorg}
             }
     };
 }
