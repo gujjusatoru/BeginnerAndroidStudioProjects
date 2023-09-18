@@ -1,4 +1,4 @@
-package com.example.travelanimation;
+package com.example.travelanimation.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.travelanimation.R;
 import com.example.travelanimation.adapters.MainAdapter;
+import com.example.travelanimation.adapters.OnClick;
 import com.example.travelanimation.adapters.SecondAdapter;
 import com.example.travelanimation.data.DataModel;
 import com.example.travelanimation.data.DataSender;
@@ -29,7 +32,7 @@ import com.example.travelanimation.data.DialogData;
 
 import java.util.ArrayList;
 
-public class ActivitySecond extends AppCompatActivity implements OnClick{
+public class ActivitySecond extends AppCompatActivity implements OnClick {
     ImageView car,smoke, dialogImg1,dialogImg2;
     Animation car_animate;
     TextView headerTxt, dialogData, dialogHeader;
@@ -37,11 +40,12 @@ public class ActivitySecond extends AppCompatActivity implements OnClick{
     RelativeLayout backbtn, homebtn, likedbtn, dialogClose;
     RecyclerView recycleMain,recycleSecondary;
     RecyclerView.LayoutManager layoutManagerMain,layoutManagerSecondary;
-    ArrayList<DataModel> data, data2, data3;
+    ArrayList<DataModel> data, data2, data3, likedList;
     MainAdapter adapter;
     SecondAdapter adapter_two;
     Dialog dialog;
     int clickedView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +73,15 @@ public class ActivitySecond extends AppCompatActivity implements OnClick{
                     headerTxt.setText("Explore");
                     instantiateSecondaryCards();
                 }
+            }
+        });
+        likedbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(ActivitySecond.this,LikedActivity.class);
+                i.putParcelableArrayListExtra("liked",likedList);
+                startActivity(i);
+                overridePendingTransition(R.anim.enter,R.anim.exit);
             }
         });
     }
@@ -142,6 +155,14 @@ public class ActivitySecond extends AppCompatActivity implements OnClick{
                     .apply(RequestOptions.bitmapTransform(new RoundedCorners(20)))
                     .into(dialogImg2);
             dialog.show();
+            dialogLike.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    likedList=new ArrayList<>();
+                    likedList.add(new DataModel(DataSender3.city[clickedView][pos],DataSender3.state[clickedView][pos],DataSender3.id_obj[pos],DataSender3.img[clickedView][pos]));
+
+                }
+            });
             dialogClose.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

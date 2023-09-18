@@ -14,12 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.travelanimation.OnClick;
 import com.example.travelanimation.R;
 import com.example.travelanimation.data.DataModel;
-import com.example.travelanimation.data.DataSender3;
-
-import org.w3c.dom.Text;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

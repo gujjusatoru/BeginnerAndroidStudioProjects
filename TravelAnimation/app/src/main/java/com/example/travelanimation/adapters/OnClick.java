@@ -1,4 +1,4 @@
-package com.example.travelanimation;
+package com.example.travelanimation.adapters;
 
 import android.view.View;
 

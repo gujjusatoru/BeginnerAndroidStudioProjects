@@ -1,7 +1,6 @@
-package com.example.travelanimation;
+package com.example.travelanimation.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.helper.widget.Layer;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
@@ -12,6 +11,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.travelanimation.R;
+import com.example.travelanimation.activities.ActivitySecond;
 
 public class MainActivity extends AppCompatActivity {
 
